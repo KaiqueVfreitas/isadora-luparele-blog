@@ -1,0 +1,91 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Diretórios de build
+dist/
+build/
+coverage/
+
+# Arquivos temporários do Vite e cache
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Configuração local do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Environment (credenciais locais)
+.env
+.env.*     # .env.local, .env.development, etc.
+*.local.*
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sw?
+
+# Arquivos de lock duplicados ou não usados
+package-lock.json
+pnpm-lock.yaml
+
+# Docker
+docker-compose.override.yml
+*.pid
+
+# MongoDB
+*.lock
+dump/
+data/
+mongodb-data/
+
+# Arquivos temporários diversos
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Testes e coverage
+coverage/
+.nyc_output/
+
+# Sistema operacional
+*.orig
+
+# Git merge conflict files
+*.rej
+*.orig
+
+# Optional: ignora arquivos específicos de backup/criação de config manual
+*.backup
+*.old
+*.example
+
+# Arquivos de tag temporários (caso esteja usando)
+*.tags
+*.ctags
+
+# Arquivos de criptografia gerados localmente
+credentials.enc
+*.key
+*.pem
+
+# Configurações temporárias do ESLint e Prettier locais
+.eslintcache
+.prettiercache
+
+yarn.lock
+
+assets/
+
+vite-env.d.ts
+
+README.MD
