@@ -6,9 +6,12 @@ app.use(express.json())
 const usuarios = []
 
 app.post('/usuarios', (req, res) => {
-    console.log(req.body)
-
-    usuarios.push(req.body)
+    prisma.users.create({
+        data: {
+            email: req.body.email,
+            password: req.body.password
+        }
+    })
     
     res.status(201).send("Usuário criado com sucesso")
 })
