@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/WhatsApp_Image_2025-06-06_at_08.41.50-removebg-preview.png';
+import logo from '../assets/WhatsApp_Image_2025-06-06_at_08.41.50-removebg-preview.jpg';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
