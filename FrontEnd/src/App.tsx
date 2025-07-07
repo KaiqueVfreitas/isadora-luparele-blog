@@ -21,7 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/Projeto_Programacao/isadora-luparele-blog/Public/dist/">
         <Routes>
           {/* Tela de login - Acesso restrito para administradores */}
           <Route path="/admin-luparele-editor" element={<AdminLogin />} />
