@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /Projeto_Programacao/isadora-luparele-blog/Public/dist/
+
+  # Não reescreve arquivos e pastas reais
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Redireciona tudo para o index.html relativo
+  RewriteRule ^ index.html [L]
+</IfModule>

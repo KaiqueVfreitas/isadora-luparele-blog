@@ -22,7 +22,7 @@ coverage/
 # Configuração local do sistema operacional
 .DS_Store
 Thumbs.db
-
+backup/
 # Environment (credenciais locais)
 .env
 .env.*     # .env.local, .env.development, etc.
