@@ -19,10 +19,12 @@ const Header = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   useEffect(() => {
-    fetch("../BackEnd/server.php?rota=navbar-visualizar&id_navbar=1")
+    fetch(`${import.meta.env.VITE_API_URL}?rota=navbar-visualizar&id_navbar=1`)
       .then((res) => res.json())
-      .then((data) => setNavbar(data));
+      .then((data) => setNavbar(data))
+      .catch((err) => console.error("Erro ao carregar navbar:", err));
   }, []);
+  
 
   if (!navbar) return <header className="text-white">Carregando...</header>;
 
@@ -32,7 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center text-xl font-bold text-white hover:text-warm-yellow transition-colors">
-              <img src={`/img/${navbar.img_logo}`} alt="Logo" className="w-10 h-10 mr-3" />
+              <img src={`/Projeto_Programacao/isadora-luparele-blog/Public/uploads/${navbar.img_logo}`} alt="Logo" className="w-10 h-10 mr-3" />
               {navbar.txt_log}
             </Link>
           </div>
