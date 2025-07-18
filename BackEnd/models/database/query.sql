@@ -3,19 +3,24 @@ use db_blog_isadora_luparele;
 
 
 create table tb_usuario(
-   id_usuario TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-   usuario varchar(20) not null,
-   senha_usuario varbinary(20) not null
+   usuario varchar(30) not null,
+   senha_usuario varchar(255) not null
+);
+
+create table tb_navbar(
+	id_navbar TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    img_logo text,
+    txt_log varchar(30),
+    item01 varchar (30),
+    item02 varchar (30),
+    item03 varchar (30),
+    item04 varchar (30),
+    item05 varchar (30)
 );
 
 
 
-select * from tb_usuario limit 1;
 
--- VISUALIZAR USUÁRIOS SEM CRIPTOGRAFIA
-SELECT 
-  usuario, 
-  CONVERT(AES_DECRYPT(senha_usuario, 'teste') USING utf8mb4) AS senha_legivel
-FROM tb_usuario;
+
 
 

@@ -11,28 +11,24 @@ const AdminLogin = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  // Mock de credenciais válidas (remova isso em produção!)
-  const MOCK_CREDENTIALS = {
-    username: 'admin',
-    password: 'admin123'
-  };
-
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulando delay de rede
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
     try {
-      // Verificação mockada
-      const isValid = username === MOCK_CREDENTIALS.username && 
-                     password === MOCK_CREDENTIALS.password;
-      
-      if (isValid) {
-        // Mock da sessão admin (armazena no localStorage)
-        localStorage.setItem('isAdmin', 'true');
-        
+      const response = await fetch(`${import.meta.env.VITE_API_URL}?rota=login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: username,
+          senha: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.autenticado === true) {
+        sessionStorage.setItem('auth', 'true'); // ativação do modo editor
         toast({
           title: "Login realizado com sucesso!",
           description: "Modo de edição ativado.",
@@ -48,7 +44,7 @@ const AdminLogin = () => {
     } catch (error) {
       toast({
         title: "Erro no servidor",
-        description: "Ocorreu um erro durante o login. Tente novamente.",
+        description: "Não foi possível realizar o login.",
         variant: "destructive",
       });
     } finally {

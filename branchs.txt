@@ -1,0 +1,5 @@
+ModoEditorNavBar, está branch está sendo desenvolvido a alteração das caracteristica do navbar conforme o usuário acessa o modo editor e loga
+
+
+
+HashRouter e PHPBrowserRoute, estás branchs estão muito desatualizadas e só existiam para testar como o PHP responderiam a cada função de roteamento. 

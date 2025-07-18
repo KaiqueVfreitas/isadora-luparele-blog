@@ -1,0 +1,11 @@
+[] Concertar o multipage do site usando BrowserRoute (Kaique)
+
+[] Fazer o modo editor alterar o navbar 
+
+[] Aplicar alteração via API para as demais section e pages do projeto
+
+[] Aplicar lógica do modo editor para as demais section e pages do projeto
+
+[] Adicionar as informações pessoais da Isa (Kaique)
+
+[] Enviar mensagem para Isa toda vez que um login errado acontecer, adicionando um middleware que decta falhas na senha e envia via SMTP um código 2f para alterar a senha e acessar o modo editor (Kaique)
